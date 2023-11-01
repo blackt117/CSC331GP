@@ -25,7 +25,7 @@ public abstract class Entity {
  *
  * Constructor - Create one for input values, and one for defaults.
  * Constructor() default values:
- *                  String: name
+ *                  String: Dummy
  *                  maxHP: 3
  *                  currentHP = maxHP
  *                  Attack: 5
@@ -35,8 +35,12 @@ public abstract class Entity {
  * (Getters and setters)
  *
  *
- * increaseHP(){ after 3 consecutive rounds, currentHP++;}
+ * increaseHP(){ after defeating an enemy, currentHP = maxHP;}
  * decreaseHP(){called when a loss happens. currentHP--; }
+ * 
+ *    public void OnDeath(){
+ *       //if currentHP = 0, show death sprite.
+ *   }
  */
 
 }

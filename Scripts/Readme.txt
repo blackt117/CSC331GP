@@ -8,8 +8,12 @@ Oct 31st:
     to add those methods and variables yourself. This was easier than creating a UML for each one!
 
     - I am currently working on a google spreadsheet that we can add monster data to. I will be creating
-    a script to pull the data from there, instead of creating all of them in the main file. the CSVParser
-    file is where I will handle this, so don't worry about it for now.
+    a script to pull the data from there, instead of creating all of them in the main file. 
+    
+    Here is a link to the google sheet. Feel free to add some monsters if desired: 
+    https://docs.google.com/spreadsheets/d/11kUB49BC0E4HY5QHu7mAsWXleXkhKbVwuue7kKzJ9rQ/edit?usp=sharing
+    
+    - the CSVParser file is where I will handle all this data, so don't worry about it for now.
 
     - We also need a driver file that handles the main menu and the game screens.
     - The driver file should:

@@ -26,13 +26,17 @@ public abstract class Monster extends Entity{
         Boss
     }
 
+    //both of these values are used for random generation and sprite visual.
     private MonsterType monsterType;
     private Difficulty difficulty;
 
     //constructor
-    //getters/setters
 
-    public void OnDeath(){
-        //if currentHP = 0, show death sprite.
-    }
+    //getters/setters
+    public MonsterType getMonsterType(){return this.monsterType;}
+    public Difficulty getDifficulty(){return this.difficulty;}
+
+    public void setMonsterType(MonsterType monsterType){this.monsterType = monsterType;}
+    public void setDifficulty(Difficulty difficulty){this.difficulty = difficulty;}
+
 }
