@@ -35,6 +35,7 @@ Oct 31st:
 
         - IN THE EVENT OF A TIE: the stat value of the choices are compared between player and monster.
                                 - whoever has the higher stat value wins the round.
+                                - if this is ALSO a tie, redo that round, no damage was taken
 
         - if the player wins the round, reduce the monster's currentHealth by 1 (can call decreaseHP();)
         - if the player reduces the monster's current health to zero, let them increase a stat of their
