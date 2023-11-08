@@ -3,35 +3,42 @@
 //This will hold the CSV parser for the monster data.
 //It just reads data from a spreadsheet and populates an array of monster entities
 //to pull from randomly during gameplay.
-import java.io.FileNotFoundException;
-import java.util.Scanner;
-import java.io.File;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 //This probably does not need to be a class, but I figured it was worth separating it out just in case. 
 public class CSVParser{
-    private Entity[] entities;
 
-    public static Entity[] generateMonsFromFile(){
-        try(Scanner scanner = new Scanner(new File("Monsters.csv"))){
-            while(scanner.hasNextLine()){
-                String line = scanner.nextLine();
+    public static List<Monster> generateMonsFromFile(){
+        String fileName = "Resources/Monsters.csv";
+        List<Monster> monsters = new ArrayList<>();
+        String line;
 
-                try(Scanner rowScanner = new Scanner(line)){
-                    rowScanner.useDelimiter(",");
-                    while(rowScanner.hasNext()){
+        try(BufferedReader br = new BufferedReader(new FileReader(fileName))){
+            while((line = br.readLine()) != null){
+                String[] data = line.split(",");
+                if(!Objects.equals(data[0], "Name")) {
+                    String charName = data[0];
+                    int maxHealth = Integer.parseInt(data[1]);
+                    int attack = Integer.parseInt(data[2]);
+                    int defense = Integer.parseInt(data[3]);
+                    int magic = Integer.parseInt(data[4]);
 
-                        //Replace this with all the data for Entity,
-                        //put it in the right location and add it as a new one.
-                        System.out.print(scanner.next());
-                    }
+                    Monster.MonsterType monType = Monster.MonsterType.values()[Integer.parseInt(data[5])];
+                    Monster.Difficulty diff = Monster.Difficulty.values()[Integer.parseInt(data[6])];
+
+                    Monster monster = new Monster(monType, diff, charName, maxHealth, attack, defense, magic);
+
+                    monsters.add(monster);
                 }
             }
 
-        }catch (FileNotFoundException e){
+        }catch (IOException e){
             e.printStackTrace();
         }
 
-
-        return new Entity[] {};
+        return monsters;
     }
 }

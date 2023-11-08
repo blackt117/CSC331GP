@@ -3,7 +3,7 @@
 //Needs enum of different kinds of monsters
 //enum of difficulty (easy, medium, minibiss, boss)
 
-public abstract class Monster extends Entity{
+public class Monster extends Entity{
 
     //monster sprite images will be determined from this enum.
     public enum MonsterType{
@@ -31,6 +31,11 @@ public abstract class Monster extends Entity{
     private Difficulty difficulty;
 
     //constructor
+    public Monster(MonsterType monsterType, Difficulty difficulty, String charName, int maxHP, int attack, int defense, int magic){
+        super(charName, maxHP, attack, defense, magic);
+        this.monsterType = monsterType;
+        this.difficulty = difficulty;
+    }
 
     //getters/setters
     public MonsterType getMonsterType(){return this.monsterType;}

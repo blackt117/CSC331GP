@@ -1,0 +1,7 @@
+Name,maxHealth,Attack,Defense,Magic,MonsterType,Difficulty
+Test Monster,3,5,5,5,0,1
+Jim,1,2,6,3,7,0
+Treasure Chest,3,6,8,3,3,2
+Peaches,4,10,3,3,8,1
+Dracula,5,10,10,10,2,3
+Walnut,1,2,2,2,5,0
