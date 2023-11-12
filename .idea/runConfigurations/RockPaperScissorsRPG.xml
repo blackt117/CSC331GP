@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="RockPaperScissorsRPG" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="GameDriver" />
+    <option name="MAIN_CLASS_NAME" value="RPGGameApplication" />
     <module name="CSC331GP" />
     <method v="2">
       <option name="Make" enabled="true" />

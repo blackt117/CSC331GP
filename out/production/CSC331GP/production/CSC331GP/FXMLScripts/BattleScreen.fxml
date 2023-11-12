@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Scene xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <AnchorPane prefHeight="600.0" prefWidth="800.0">
+      <children>
+         <ImageView fx:id="BackgroundImg" fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../Resources/EntitySprites/BattleScreen1.png" />
+            </image>
+         </ImageView>
+         <Pane layoutX="70.0" layoutY="133.0" prefHeight="176.0" prefWidth="176.0">
+            <children>
+               <ImageView fx:id="PlayerSprite" fitHeight="176.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../Resources/EntitySprites/PlayerDefense.png" />
+                  </image>
+               </ImageView>
+            </children>
+         </Pane>
+         <Pane layoutX="35.0" layoutY="372.0" prefHeight="200.0" prefWidth="245.0">
+            <children>
+               <Button fx:id="AttackButton" layoutX="65.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-background-insets: EMPTY;">
+                  <graphic>
+                     <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../Resources/EntitySprites/buttonA.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button fx:id="DefenseButton" layoutX="14.0" layoutY="92.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                  <graphic>
+                     <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../Resources/EntitySprites/buttonD.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button fx:id="MagicButton" layoutX="115.0" layoutY="92.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                  <graphic>
+                     <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../Resources/EntitySprites/buttonM.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+            </children>
+         </Pane>
+         <Pane layoutX="543.0" layoutY="133.0" prefHeight="176.0" prefWidth="176.0">
+            <children>
+               <ImageView fx:id="MonsterSprite" fitHeight="176.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../Resources/EntitySprites/slime1.png" />
+                  </image>
+               </ImageView>
+            </children>
+         </Pane>
+         <Pane layoutX="516.0" layoutY="362.0" prefHeight="209.0" prefWidth="231.0">
+            <children>
+               <ImageView fx:id="MonAttack" fitHeight="100.0" fitWidth="100.0" layoutX="69.0" layoutY="9.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../Resources/EntitySprites/buttonA.png" />
+                  </image>
+               </ImageView>
+               <ImageView fx:id="MonMagic" fitHeight="100.0" fitWidth="100.0" layoutX="119.0" layoutY="102.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../Resources/EntitySprites/buttonM.png" />
+                  </image>
+               </ImageView>
+               <ImageView fx:id="MonDefense" fitHeight="100.0" fitWidth="100.0" layoutX="17.0" layoutY="102.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../Resources/EntitySprites/buttonD.png" />
+                  </image>
+               </ImageView>
+            </children>
+         </Pane>
+         <Label layoutX="56.0" layoutY="61.0" text="Player Name Here">
+            <font>
+               <Font name="Berlin Sans FB Demi Bold" size="27.0" />
+            </font>
+         </Label>
+         <Label layoutX="544.0" layoutY="61.0" text="Monster Name">
+            <font>
+               <Font name="Berlin Sans FB Demi Bold" size="27.0" />
+            </font>
+         </Label>
+         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="347.0" layoutY="24.0" prefHeight="99.0" prefWidth="123.0" rotate="-10.3" text="VS" textAlignment="CENTER" textFill="#c26348">
+            <font>
+               <Font name="Berlin Sans FB Demi Bold" size="89.0" />
+            </font>
+         </Label>
+         <Label contentDisplay="RIGHT" layoutX="23.0" layoutY="324.0" text="HP">
+            <font>
+               <Font name="Berlin Sans FB Demi Bold" size="27.0" />
+            </font>
+            <graphic>
+               <ProgressBar fx:id="PlayerHP" nodeOrientation="LEFT_TO_RIGHT" prefHeight="32.0" prefWidth="181.0" progress="0.0" />
+            </graphic>
+         </Label>
+         <Label layoutX="543.0" layoutY="324.0" text="HP">
+            <font>
+               <Font name="Berlin Sans FB Demi Bold" size="27.0" />
+            </font>
+            <graphic>
+               <ProgressBar fx:id="PlayerHP1" nodeOrientation="LEFT_TO_RIGHT" prefHeight="32.0" prefWidth="180.0" progress="0.0" />
+            </graphic>
+         </Label>
+         <Pane layoutX="270.0" layoutY="117.0" prefHeight="245.0" prefWidth="260.0">
+            <children>
+               <Label alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="24.0" text="Attack">
+                  <font>
+                     <Font name="Berlin Sans FB Demi Bold" size="33.0" />
+                  </font>
+               </Label>
+               <Label alignment="CENTER" contentDisplay="CENTER" layoutX="76.0" layoutY="105.0" text="Defense">
+                  <font>
+                     <Font name="Berlin Sans FB Demi Bold" size="31.0" />
+                  </font>
+               </Label>
+               <Label alignment="CENTER" contentDisplay="CENTER" layoutX="86.0" layoutY="179.0" text="Magic">
+                  <font>
+                     <Font name="Berlin Sans FB Demi Bold" size="33.0" />
+                  </font>
+               </Label>
+               <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="8.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../Resources/EntitySprites/blankRed.png" />
+                  </image>
+               </ImageView>
+               <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="195.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../Resources/EntitySprites/blankRed.png" />
+                  </image>
+               </ImageView>
+               <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="8.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../Resources/EntitySprites/blankyellow.png" />
+                  </image>
+               </ImageView>
+               <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="195.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../Resources/EntitySprites/blankyellow.png" />
+                  </image>
+               </ImageView>
+               <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="8.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../Resources/EntitySprites/blankblue.png" />
+                  </image>
+               </ImageView>
+               <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="195.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../Resources/EntitySprites/blankblue.png" />
+                  </image>
+               </ImageView>
+               <Label id="PlayerAttkStat" layoutX="24.0" layoutY="30.0" text="99">
+                  <font>
+                     <Font name="Berlin Sans FB Demi Bold" size="23.0" />
+                  </font>
+               </Label>
+               <Label id="PlayerDefStat" layoutX="24.0" layoutY="109.0" text="99">
+                  <font>
+                     <Font name="Berlin Sans FB Demi Bold" size="23.0" />
+                  </font>
+               </Label>
+               <Label id="PlayerMagStat" layoutX="24.0" layoutY="185.0" text="99">
+                  <font>
+                     <Font name="Berlin Sans FB Demi Bold" size="23.0" />
+                  </font>
+               </Label>
+               <Label id="MonsterAttkStat" layoutX="211.0" layoutY="30.0" text="99">
+                  <font>
+                     <Font name="Berlin Sans FB Demi Bold" size="23.0" />
+                  </font>
+               </Label>
+               <Label id="MonsterDefStat" layoutX="211.0" layoutY="109.0" text="99">
+                  <font>
+                     <Font name="Berlin Sans FB Demi Bold" size="23.0" />
+                  </font>
+               </Label>
+               <Label id="MonsterMagStat" layoutX="211.0" layoutY="185.0" text="99">
+                  <font>
+                     <Font name="Berlin Sans FB Demi Bold" size="23.0" />
+                  </font>
+               </Label>
+            </children>
+         </Pane>
+         <Pane layoutX="286.0" layoutY="372.0" prefHeight="164.0" prefWidth="229.0" visible="false">
+            <children>
+               <Button id="WinButton" mnemonicParsing="false" prefHeight="118.0" prefWidth="227.0" text="You Win!">
+                  <font>
+                     <Font name="Berlin Sans FB Demi Bold" size="40.0" />
+                  </font>
+               </Button>
+               <Label alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="123.0" text="(Click to continue)">
+                  <font>
+                     <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+                  </font>
+               </Label>
+            </children>
+         </Pane>
+      </children></AnchorPane>
+</Scene>

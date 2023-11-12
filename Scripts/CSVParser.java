@@ -19,7 +19,10 @@ public class CSVParser{
         try(BufferedReader br = new BufferedReader(new FileReader(fileName))){
             while((line = br.readLine()) != null){
                 String[] data = line.split(",");
+
+                //If it's not the first line, add the data as a monster object.
                 if(!Objects.equals(data[0], "Name")) {
+
                     String charName = data[0];
                     int maxHealth = Integer.parseInt(data[1]);
                     int attack = Integer.parseInt(data[2]);
