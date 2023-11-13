@@ -17,8 +17,9 @@ public class GameDriver {
             flag = true;
             //start game
         }
+        //print the array of the characters to the screen
+        System.outprintln("")
         System.out.println("Please enter a character you would like to use");
-        
         String player1 = input.nextLine();
     }
 }
