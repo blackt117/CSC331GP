@@ -12,7 +12,9 @@ public class GameDriver {
         System.out.println("Welcome to our game");
         System.out.println("Would you like to play a new game? (Y for yes N for no) ")
         String answer = input.nextLine();
+        boolean flag = false;
         if (answer.equals("Y") || answer.equals("y"){
+            flag = true;
             //start game
         }
         System.out.println("Please enter a character you would like to use");
